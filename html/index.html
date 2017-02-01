@@ -1,0 +1,50 @@
+<html>
+<head>
+<script src="swfobject.js"></script>
+<script>
+var params = {
+  "align": "middle",
+  "quality": "high",
+  "bgcolor": "#ffffff",
+  "name": "KRecordVideo",
+  "allowScriptAccess":"sameDomain",
+  "type": "application/x-shockwave-flash",
+  "pluginspage": "http://www.adobe.com/go/getflashplayer",
+  "wmode": "opaque"
+};
+
+var recordVars = {
+  host: "https://example.com",
+  rtmpHost: "rtmp://rtmp.docker/oflaDemo",
+  kshowId: "-1",
+  pid: 146,
+  subpid: 1,
+  uid: "1",
+  ks: "",
+  themeUrl: "/skin.swf",
+  localeUrl: "/locale.xml",
+  thumbOffset: "1",
+  licenseType: "CC-0.1",
+  showUi: "true",
+  useCamera: "1",
+  maxFileSize: 100000000,
+  maxUploads: 1,
+  partnerData: "",
+  partner_data: "",
+  entryName: "foo",
+  soundcodec: 'Speex'
+};
+
+swfobject.embedSWF("/KRecord.swf", "video_record", "400", "300", "9.0.0", false, recordVars, params);
+
+</script>
+</head>
+
+<body>
+
+<h1>Recording tester.</h1>
+
+<div id="video_record" />
+
+</body>
+</html>

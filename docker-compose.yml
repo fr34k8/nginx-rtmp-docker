@@ -1,0 +1,14 @@
+version: '2'
+services:
+  nginx:
+    build:
+      context: .
+    ports:
+      - "1935:1935"
+      - "8000"
+    environment:
+      VIRTUAL_HOST: rtmp.docker
+      VIRTUAL_PORT: 8000
+    volumes:
+      - "./html:/var/www/html"
+      - "./recordings:/tmp/recordings"
